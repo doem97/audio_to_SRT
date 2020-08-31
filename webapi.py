@@ -208,8 +208,8 @@ if __name__ == '__main__':
     api = RequestApi(appid="to-be-filled", secret_key="to-be-filled", upload_file_path=r"./out000.mp3")
     api.all_api_request()
 
-def run(audiofilename):
-    api = RequestApi(appid="to-be-filled", secret_key="to-be-filled", upload_file_path=audiofilename)
+def run(audiofilename, APPID='', Secret_key=''):
+    api = RequestApi(appid=APPID, secret_key=Secret_key, upload_file_path=audiofilename)
     return api.all_api_request()
 
 def get_result_only(audiofilename, task_id=''):
