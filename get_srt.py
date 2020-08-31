@@ -1,5 +1,5 @@
-#Usage: rename the .mp3 file as audio.mp3
-#run python get_srt.py > ./work_dir/audio.srt
+#Usage: rename the anyname.wav file as audio.wav
+#run python get_srt.py and the subtitle will be generated to ./work_dir/audio.srt
 
 import webapi
 import json
@@ -29,11 +29,11 @@ if __name__ == '__main__':
     with open(outputdir_srt,'a') as f:
         for i in range(lenth_w):
             currentp=json.loads(alist[i])
-            f.write('{}\n'.format(i+1))
+            f.write('{}\r\n'.format(i+1)) # For windows usage, add '\r' to enable CRLF
             timea=millitotime(currentp['bg'])
             timeb=millitotime(currentp['ed'])
             sentence=currentp['onebest']
-            f.write("{} --> {}\n".format(timea,timeb))
-            f.write("{}\n".format(sentence))
-            f.write('\n')
+            f.write("{} --> {}\r\n".format(timea,timeb))
+            f.write("{}\r\n".format(sentence))
+            f.write('\r\n')
 
