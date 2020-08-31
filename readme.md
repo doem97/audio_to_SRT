@@ -2,6 +2,12 @@ This tool generates `.srt` format subtitle from audios.
 
 # Usage
 
+## Git clone
+
+```git clone https://github.com/doem97/audio_to_SRT.git```
+
+And open it.
+
 ## Get XUNFEI cloud certification
 
 This script calls XUNFEI api. You should first get a XUNFEI cloud account at https://console.xfyun.cn/services/lfasr. Go to 语音识别 - 语音转写 to get your APPID and SecretKey.
