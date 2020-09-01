@@ -93,7 +93,7 @@ class RequestApi(object):
             param_dict['slice_num'] = str(slice_num)
             param_dict['language'] = 'en'
             param_dict['speaker_number'] = str(1)
-            param_dict['pd'] = 'edu'
+            param_dict['pd'] = 'tech'
         elif apiname == api_upload:
             param_dict['app_id'] = appid
             param_dict['signa'] = signa
